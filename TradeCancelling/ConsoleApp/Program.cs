@@ -9,9 +9,9 @@ namespace ConsoleApp
         {
             Console.Clear();
             Console.WriteLine("Task initializing...");
-            CodeV01.RunTest();
-            GC.Collect();
-            await CodeV02.RunTest();
+            MyOriginalCode.RunSample();
+
+            await ProductionCode.RunSample();
             Console.WriteLine("Press ENTER to end...");
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {

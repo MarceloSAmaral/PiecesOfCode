@@ -13,6 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionCode.TradeCancell
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionCode.TradeCancelling.Tests", "ProductionCode.TradeCancelling.Tests\ProductionCode.TradeCancelling.Tests.csproj", "{7E0E1F5D-D715-4B47-9E23-00B1AD5C9CF7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE9D661C-170D-4FC8-9745-497AAB65DBD3}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Trades.data = Trades.data
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

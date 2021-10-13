@@ -4,18 +4,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class CodeV02
+    class ProductionCode
     {
-        public static async Task RunTest()
+        public static async Task RunSample()
         {
-            Console.WriteLine("Code Test V02");
+            Console.WriteLine("Running production level code sample...");
             System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();
             List<string> companiesInvolvedInExcessiveCancellationsResult;
             int totalNumberOfWellBehavedCompaniesResult;
-            ProductionCode.TradeCancelling.ExcessiveTradeCancellingConfiguration.DatafileFullName = "../../../../Trades.data";
-            companiesInvolvedInExcessiveCancellationsResult = await ProductionCode.TradeCancelling.ExcessiveTradeCancellingChecker.GetCompaniesInvolvedInExcessiveCancellations();
-            totalNumberOfWellBehavedCompaniesResult = await ProductionCode.TradeCancelling.ExcessiveTradeCancellingChecker.GetTotalNumberOfWellBehavedCompanies();
+            global::ProductionCode.TradeCancelling.ExcessiveTradeCancellingConfiguration.DatafileFullName = "../../../../Trades.data";
+            companiesInvolvedInExcessiveCancellationsResult = await global::ProductionCode.TradeCancelling.ExcessiveTradeCancellingChecker.GetCompaniesInvolvedInExcessiveCancellations();
+            totalNumberOfWellBehavedCompaniesResult = await global::ProductionCode.TradeCancelling.ExcessiveTradeCancellingChecker.GetTotalNumberOfWellBehavedCompanies();
             stopwatch.Stop();
             Console.WriteLine($"Time to perform task: {stopwatch.ElapsedMilliseconds}");
             Console.WriteLine("Companies that exceeded cancellations:");

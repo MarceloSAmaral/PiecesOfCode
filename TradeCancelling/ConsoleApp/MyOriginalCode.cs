@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace ConsoleApp
 {
-    class CodeV01
+    class MyOriginalCode
     {
-        public static void RunTest()
+        public static void RunSample()
         {
-            Console.WriteLine("Code Test V01");
+            Console.WriteLine("Running original code sample...");
             System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();
             List<string> companiesInvolvedInExcessiveCancellationsResult;
