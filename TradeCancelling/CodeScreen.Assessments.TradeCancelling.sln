@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{993FFB6E-49AD-41C2-B4C0-D2CF40D6B543}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeScreen.Assessments.TradeCancelling", "CodeScreen.Assesments.TradeCancelling\CodeScreen.Assessments.TradeCancelling.csproj", "{98BA3C57-8FAC-4BA0-8C38-A9F2EFAAB2B4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeScreen.Assessments.TradeCancelling.Tests", "CodeScreen.Assessments.TradeCancelling.Tests\CodeScreen.Assessments.TradeCancelling.Tests.csproj", "{585155DD-BE09-403C-9F0F-87450C090D99}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionCode.TradeCancelling", "ProductionCode.TradeCancelling\ProductionCode.TradeCancelling.csproj", "{9FFECDB8-6112-472B-8760-1DEA854EE704}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionCode.TradeCancelling.Tests", "ProductionCode.TradeCancelling.Tests\ProductionCode.TradeCancelling.Tests.csproj", "{7E0E1F5D-D715-4B47-9E23-00B1AD5C9CF7}"
@@ -29,14 +25,6 @@ Global
 		{993FFB6E-49AD-41C2-B4C0-D2CF40D6B543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{993FFB6E-49AD-41C2-B4C0-D2CF40D6B543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{993FFB6E-49AD-41C2-B4C0-D2CF40D6B543}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98BA3C57-8FAC-4BA0-8C38-A9F2EFAAB2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98BA3C57-8FAC-4BA0-8C38-A9F2EFAAB2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98BA3C57-8FAC-4BA0-8C38-A9F2EFAAB2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98BA3C57-8FAC-4BA0-8C38-A9F2EFAAB2B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{585155DD-BE09-403C-9F0F-87450C090D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{585155DD-BE09-403C-9F0F-87450C090D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{585155DD-BE09-403C-9F0F-87450C090D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{585155DD-BE09-403C-9F0F-87450C090D99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9FFECDB8-6112-472B-8760-1DEA854EE704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FFECDB8-6112-472B-8760-1DEA854EE704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FFECDB8-6112-472B-8760-1DEA854EE704}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -7,8 +7,10 @@ namespace ProductionCode.TradeCancelling
     /// This Collection holds instace values of OrderTypes.
     /// </summary>
     /// <remarks>
-    /// This approach both allows to use a typed value ir our code and also avoids a concurrency problem when
-    /// we use the approch where the OrderTypes class holds static named instances.
+    /// This approach provides:
+    /// A) A typed reference for OrderTypes;
+    /// B) Avoids a concurrency problem when initializing a class that holds static 
+    ///     named instances of itself in a multithread context.
     /// </remarks>
     public sealed class OrderTypesCollection
     {
@@ -40,7 +42,7 @@ namespace ProductionCode.TradeCancelling
         {
             if (string.IsNullOrWhiteSpace(stringValue))
             {
-                throw new ArgumentException();
+                throw new ArgumentException(nameof(stringValue));
             }
 
             foreach (var item in OrderTypes.GetList())

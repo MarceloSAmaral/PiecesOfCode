@@ -1,20 +1,18 @@
-using NUnit.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Xunit;
 
-namespace CodeScreen.Assessments.TradeCancelling.Tests
+namespace ProductionCode.TradeCancelling.Tests
 {
-    [TestFixture]
     public class ExcessiveTradeCancellingCheckerTest
     {
-        [TestCase]
+        [Fact]
         public void TestCompaniesInvolvedInExcessiveCancellations()
         {
             List<string> expectedCompaniesInvolvedInExcessiveCancellations = new List<string>();
             expectedCompaniesInvolvedInExcessiveCancellations.Add("Ape accountants");
             expectedCompaniesInvolvedInExcessiveCancellations.Add("Cauldron cooking");
-
-            Assert.AreEqual(expectedCompaniesInvolvedInExcessiveCancellations, ExcessiveTradeCancellingChecker.CompaniesInvolvedInExcessiveCancellations());
+            var result = ExcessiveTradeCancellingChecker.GetCompaniesInvolvedInExcessiveCancellations().Result;
+            Assert.Equal(expectedCompaniesInvolvedInExcessiveCancellations, result);
         }
-
     }
 }

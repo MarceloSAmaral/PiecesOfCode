@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeScreen.Assesments.TradeCancelling\CodeScreen.Assessments.TradeCancelling.csproj" />
     <ProjectReference Include="..\ProductionCode.TradeCancelling\ProductionCode.TradeCancelling.csproj" />
   </ItemGroup>
 
