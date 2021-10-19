@@ -2,7 +2,7 @@
 {
     public static class ExcessiveTradeCancellingConfiguration
     {
-        public static string DatafileFullName { get; set; } = "../../../../Trades.data";
+        public static string DatafileFullName { get; set; } = "Trades.data";
 
         public static int TimeWindowInSeconds { get; set; } = 60;
 

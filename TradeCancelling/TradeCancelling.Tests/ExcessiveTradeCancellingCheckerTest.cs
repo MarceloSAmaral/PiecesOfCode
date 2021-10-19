@@ -8,6 +8,7 @@ namespace TradeCancelling.Tests
         [Fact]
         public void TestCompaniesInvolvedInExcessiveCancellations()
         {
+            ExcessiveTradeCancellingConfiguration.DatafileFullName = "Trades.data";
             List<string> expectedCompaniesInvolvedInExcessiveCancellations = new List<string>();
             expectedCompaniesInvolvedInExcessiveCancellations.Add("Ape accountants");
             expectedCompaniesInvolvedInExcessiveCancellations.Add("Cauldron cooking");

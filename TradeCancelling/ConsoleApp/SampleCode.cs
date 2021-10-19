@@ -13,7 +13,7 @@ namespace ConsoleApp
             stopwatch.Start();
             List<string> companiesInvolvedInExcessiveCancellationsResult;
             int totalNumberOfWellBehavedCompaniesResult;
-            TradeCancelling.ExcessiveTradeCancellingConfiguration.DatafileFullName = "../../../../Trades.data";
+            TradeCancelling.ExcessiveTradeCancellingConfiguration.DatafileFullName = "Trades.data";
             companiesInvolvedInExcessiveCancellationsResult = await TradeCancelling.ExcessiveTradeCancellingChecker.GetCompaniesInvolvedInExcessiveCancellations();
             totalNumberOfWellBehavedCompaniesResult = await TradeCancelling.ExcessiveTradeCancellingChecker.GetTotalNumberOfWellBehavedCompanies();
             stopwatch.Stop();
