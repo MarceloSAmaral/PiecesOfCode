@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ProductionCode.TradeCancelling
+namespace TradeCancelling
 {
     public class TradeMessageRecord
     {

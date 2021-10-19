@@ -4,18 +4,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class ProductionCode
+    class SampleCode
     {
         public static async Task RunSample()
         {
-            Console.WriteLine("Running production level code sample...");
+            Console.WriteLine("Running code sample...");
             System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();
             List<string> companiesInvolvedInExcessiveCancellationsResult;
             int totalNumberOfWellBehavedCompaniesResult;
-            global::ProductionCode.TradeCancelling.ExcessiveTradeCancellingConfiguration.DatafileFullName = "../../../../Trades.data";
-            companiesInvolvedInExcessiveCancellationsResult = await global::ProductionCode.TradeCancelling.ExcessiveTradeCancellingChecker.GetCompaniesInvolvedInExcessiveCancellations();
-            totalNumberOfWellBehavedCompaniesResult = await global::ProductionCode.TradeCancelling.ExcessiveTradeCancellingChecker.GetTotalNumberOfWellBehavedCompanies();
+            TradeCancelling.ExcessiveTradeCancellingConfiguration.DatafileFullName = "../../../../Trades.data";
+            companiesInvolvedInExcessiveCancellationsResult = await TradeCancelling.ExcessiveTradeCancellingChecker.GetCompaniesInvolvedInExcessiveCancellations();
+            totalNumberOfWellBehavedCompaniesResult = await TradeCancelling.ExcessiveTradeCancellingChecker.GetTotalNumberOfWellBehavedCompanies();
             stopwatch.Stop();
             Console.WriteLine($"Time to perform task: {stopwatch.ElapsedMilliseconds}");
             Console.WriteLine("Companies that exceeded cancellations:");
@@ -23,7 +23,7 @@ namespace ConsoleApp
             {
                 Console.WriteLine($"\t{item}");
             }
-            Console.WriteLine($"Total Number Of Well Behaved Companies: {totalNumberOfWellBehavedCompaniesResult}");
+            Console.WriteLine($"Total number of well behaved companies: {totalNumberOfWellBehavedCompaniesResult}");
         }
     }
 }

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{993FFB6E-49AD-41C2-B4C0-D2CF40D6B543}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionCode.TradeCancelling", "ProductionCode.TradeCancelling\ProductionCode.TradeCancelling.csproj", "{9FFECDB8-6112-472B-8760-1DEA854EE704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeCancelling", "TradeCancelling\TradeCancelling.csproj", "{9FFECDB8-6112-472B-8760-1DEA854EE704}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionCode.TradeCancelling.Tests", "ProductionCode.TradeCancelling.Tests\ProductionCode.TradeCancelling.Tests.csproj", "{7E0E1F5D-D715-4B47-9E23-00B1AD5C9CF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradeCancelling.Tests", "TradeCancelling.Tests\TradeCancelling.Tests.csproj", "{7E0E1F5D-D715-4B47-9E23-00B1AD5C9CF7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE9D661C-170D-4FC8-9745-497AAB65DBD3}"
 	ProjectSection(SolutionItems) = preProject

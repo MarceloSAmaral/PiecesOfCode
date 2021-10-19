@@ -1,4 +1,4 @@
-﻿namespace ProductionCode.TradeCancelling
+﻿namespace TradeCancelling
 {
     public static class ExcessiveTradeCancellingConfiguration
     {

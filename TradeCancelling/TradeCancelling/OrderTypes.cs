@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProductionCode.TradeCancelling
+namespace TradeCancelling
 {
     /// <summary>
     /// This Collection holds instace values of OrderTypes.

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Collections.Concurrent;
 using System.Threading;
 
-namespace ProductionCode.TradeCancelling
+namespace TradeCancelling
 {
     public static class ExcessiveTradeCancellingChecker
     {

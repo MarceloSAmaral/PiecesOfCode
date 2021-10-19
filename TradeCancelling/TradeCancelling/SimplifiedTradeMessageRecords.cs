@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProductionCode.TradeCancelling
+namespace TradeCancelling
 {
     public class SimplifiedTradeMessageRecords
     {

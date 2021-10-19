@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ProductionCode.TradeCancelling
+namespace TradeCancelling
 {
     public class AggregatedTradeMessageRecords
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace ProductionCode.TradeCancelling.Tests
+namespace TradeCancelling.Tests
 {
     public class ExcessiveTradeCancellingCheckerTest
     {

@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProductionCode.TradeCancelling\ProductionCode.TradeCancelling.csproj" />
+    <ProjectReference Include="..\TradeCancelling\TradeCancelling.csproj" />
   </ItemGroup>
 
 </Project>

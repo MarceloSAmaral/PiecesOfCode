@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ProductionCode.TradeCancelling
+namespace TradeCancelling
 {
     public class MessagesFileReader : IMessagesFileReader
     {
