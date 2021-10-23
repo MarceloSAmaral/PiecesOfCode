@@ -5,6 +5,6 @@ namespace TradeCancelling
     public interface IMessagesFileReader
     {
         IAsyncEnumerable<TradeMessageRecord> GetRecordsFromFile(string fileRelativePath);
-        IAsyncEnumerable<AggregatedTradeMessageRecords> LoadSplittedRecords(string fileRelativePath);
+        IAsyncEnumerable<CompanyAggregatedTradeMessageRecords> GetCompanyAggregatedRecords(string fileRelativePath);
     }
 }

@@ -22,9 +22,9 @@ namespace TradeCancelling
             file.Close();
         }
 
-        public async IAsyncEnumerable<AggregatedTradeMessageRecords> LoadSplittedRecords(string fileRelativePath)
+        public async IAsyncEnumerable<CompanyAggregatedTradeMessageRecords> GetCompanyAggregatedRecords(string fileRelativePath)
         {
-            Dictionary<string, AggregatedTradeMessageRecords> aggregatedRecords = new Dictionary<string, AggregatedTradeMessageRecords>();
+            Dictionary<string, CompanyAggregatedTradeMessageRecords> aggregatedRecords = new Dictionary<string, CompanyAggregatedTradeMessageRecords>();
             await foreach (var tradeMessage in GetRecordsFromFile(fileRelativePath))
             {
                 if (aggregatedRecords.ContainsKey(tradeMessage.CompanyName))
@@ -34,7 +34,7 @@ namespace TradeCancelling
                 }
                 else
                 {
-                    AggregatedTradeMessageRecords newCompanyRecord = new AggregatedTradeMessageRecords();
+                    CompanyAggregatedTradeMessageRecords newCompanyRecord = new CompanyAggregatedTradeMessageRecords();
                     newCompanyRecord.CompanyName = tradeMessage.CompanyName;
                     newCompanyRecord.TimeSortedTradeMessages.Enqueue(new SimplifiedTradeMessageRecords() { MessageTime = tradeMessage.MessageTime, OrderType = tradeMessage.OrderType, Quantity = tradeMessage.Quantity });
                     aggregatedRecords.Add(tradeMessage.CompanyName, newCompanyRecord);

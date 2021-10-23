@@ -12,11 +12,10 @@ namespace TradeCancelling
         public static async Task<List<string>> GetCompaniesInvolvedInExcessiveCancellations()
         {
             // Returns the list of companies that are involved in excessive cancelling.
-            //TODO Implement
             ConcurrentQueue<string> excessiveCancellationsCompanies = new ConcurrentQueue<string>();
             List<Thread> threads = new List<Thread>();
             IMessagesFileReader messagesReader = new MessagesFileReader();
-            var aggregatedtradeMessages = messagesReader.LoadSplittedRecords(ExcessiveTradeCancellingConfiguration.DatafileFullName);
+            var aggregatedtradeMessages = messagesReader.GetCompanyAggregatedRecords(ExcessiveTradeCancellingConfiguration.DatafileFullName);
 
             await foreach (var companyRecord in aggregatedtradeMessages)
             {
@@ -32,12 +31,11 @@ namespace TradeCancelling
         public static async Task<int> GetTotalNumberOfWellBehavedCompanies()
         {
             // Returns the total number of companies that are not involved in any excessive cancelling.
-            //TODO Implement
             Queue<String> allCompanies = new Queue<string>();
             ConcurrentQueue<string> excessiveCancellationsCompanies = new ConcurrentQueue<string>();
             List<Thread> threads = new List<Thread>();
             IMessagesFileReader messagesReader = new MessagesFileReader();
-            var aggregatedtradeMessages = messagesReader.LoadSplittedRecords(ExcessiveTradeCancellingConfiguration.DatafileFullName);
+            var aggregatedtradeMessages = messagesReader.GetCompanyAggregatedRecords(ExcessiveTradeCancellingConfiguration.DatafileFullName);
 
             await foreach (var companyRecord in aggregatedtradeMessages)
             {
@@ -51,10 +49,10 @@ namespace TradeCancelling
             return allCompanies.Count - excessiveCancellationsCompanies.Count;
         }
 
-        private static Thread CreateThreadForChecker(AggregatedTradeMessageRecords companyRecord, ConcurrentQueue<string> excessiveCancellationsCompanies)
+        private static Thread CreateThreadForChecker(CompanyAggregatedTradeMessageRecords companyRecord, ConcurrentQueue<string> excessiveCancellationsCompanies)
         {
 
-            Thread processingCompanyThread = new Thread(new ParameterizedThreadStart(x => CheckHasExcessiveCancellations( (x as object[])[0] as AggregatedTradeMessageRecords, (x as object[])[1] as ConcurrentQueue<string>)));
+            Thread processingCompanyThread = new Thread(new ParameterizedThreadStart(x => CheckHasExcessiveCancellations( (x as object[])[0] as CompanyAggregatedTradeMessageRecords, (x as object[])[1] as ConcurrentQueue<string>)));
             processingCompanyThread.Name = $"Check HasExcessiveCancellations {companyRecord.CompanyName}";
             processingCompanyThread.IsBackground = false;
             processingCompanyThread.Priority = ThreadPriority.Normal;
@@ -79,7 +77,7 @@ namespace TradeCancelling
             }
         }
 
-        private static void CheckHasExcessiveCancellations(AggregatedTradeMessageRecords companyRecord, ConcurrentQueue<string> outputQueue)
+        private static void CheckHasExcessiveCancellations(CompanyAggregatedTradeMessageRecords companyRecord, ConcurrentQueue<string> outputQueue)
         {
             if (CheckHasExcessiveCancellations(companyRecord.TimeSortedTradeMessages.ToArray()))
             {

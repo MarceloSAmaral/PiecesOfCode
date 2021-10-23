@@ -2,7 +2,7 @@
 
 namespace TradeCancelling
 {
-    public class AggregatedTradeMessageRecords
+    public class CompanyAggregatedTradeMessageRecords
     {
         public string CompanyName { get; set; }
 
